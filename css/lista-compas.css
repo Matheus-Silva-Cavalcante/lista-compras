@@ -1,0 +1,43 @@
+.lista-compra {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-height: 43rem;
+    padding: 1rem .5rem;
+    overflow: auto;
+
+    & .lista-compra_item {
+        background-color: var(--background-secondary);
+        color: var(--content-secondary);
+        font-size: 1.6rem;
+        border-radius: 1.2rem;
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.2rem;
+
+        & .lista-compra_item_descricao {
+            flex: 1;
+        }
+
+        & .lista-compra_item_lixeira {
+            display: flex;
+            align-items: center;
+
+            transition: .5s;
+            background-color: transparent;
+            opacity: .6;
+
+            &:hover {
+                opacity: .9;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .lista-compra{
+        max-height: 32rem;
+    }
+}

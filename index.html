@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap"
+        rel="stylesheet">
+
+    <title>Lista de Compras</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/salvar.js" defer></script>
+    <script src="js/msgRemovido.js" defer></script>
+    <script src="js/addItem.js" defer></script>
+    <script src="js/gerarLista.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo quicklist">
+            </div>
+
+            <div>
+                <a href="#">
+                    <img src="icons/setaVoltar.svg">
+                    Voltar
+                </a>
+            </div>
+
+            <div class="titulo">
+                <h1>Compras da semana</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="add-item">
+                <div class="add-item_descricao">
+                    <input id="descricaoItem" type="text" required placeholder="Adicionar um novo item">
+
+                    <span class="erro-msg-campo-vasio" style="display: none;">
+                        Campo vasio
+                        <img src="icons/warning-red.svg">
+                    </span>
+                </div>
+
+                <div class="add-item_area-btn">
+                    <button class="add-item_btn" id="btnAddItem">Adicionar item</button>
+                </div>
+            </div>
+
+            <div class="remover-lista" style="display: none;">
+                <button class="btn-remover-lista">
+                    <img src="icons/lixeira.svg">
+                </button>
+                
+                Remover lista
+            </div>
+
+            <div class="lista-compra">
+                <div class="lista-compra_item">
+                    <div class="checkbox">
+                        <div class="checkbox-img"></div>
+                        
+                        <input type="checkbox" name="check">
+                    </div>
+
+                    <div class="lista-compra_item_descricao">
+                        Pão de forma
+                    </div>
+
+                    <button class="lista-compra_item_lixeira" id="excluirItem">
+                        <img src="icons/lixeira.svg">
+                    </button>
+                </div>
+            </div>
+
+            <div class="msg-removido msg-item-removido" style="display: none;">
+                <img src="icons/warning.svg">
+
+                <div class="msg-removido_descicao msg-item-removido_descicao">
+                    O item foi removido da lista.
+                </div>
+
+                <button id="btnLimparMsgItem">
+                    <img src="icons/iconx.svg">
+                </button>
+            </div>
+            
+            <div class="msg-removido msg-lista-removida" style="display: none;">
+                <img src="icons/warning.svg">
+
+                <div class="msg-removido_descicao msg-lista-removida_descicao">
+                    A lista foi removida do localStorage.
+                </div>
+
+                <button id="btnLimparMsgLista">
+                    <img src="icons/iconx.svg">
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

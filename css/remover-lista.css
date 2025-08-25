@@ -1,0 +1,34 @@
+.remover-lista{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-bottom: -2rem;
+
+    font-size: 1.5rem;
+
+    animation: removerLista 1s both;
+    animation-iteration-count: 1
+}
+
+@keyframes removerLista {
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: .3;
+    }
+
+    50%{
+        opacity: .5;
+    }
+
+    75%{
+        opacity: .7;
+    }
+
+    100%{
+        opacity: .9;
+    }
+}

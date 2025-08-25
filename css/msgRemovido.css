@@ -1,0 +1,62 @@
+.msg-removido {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 1.2rem;
+    box-sizing: border-box;
+
+    background-color: var(--color-danger);
+    color: var(--always-white);
+    border-radius: 1.2rem;
+
+    & .msg-removido_descicao {
+        flex: 1;
+        font-size: 1.6rem;
+
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    & button {
+        background-color: transparent;
+    }
+}
+
+.msg-item-removido{
+    margin-bottom: -2rem;
+
+    animation: msgRemovido 1s linear both;
+
+    & .msg-item-removido_descicao{
+        animation: msgDescricao 2.5s steps(40, end);
+    }
+}
+
+.msg-lista-removida{
+    animation: msgRemovido 1s linear both;
+
+    & .msg-lista-removida_descicao{
+        animation: msgDescricao 2.5s steps(40, end);
+    }
+}
+
+@keyframes msgRemovido {
+    0% {
+        width: 5%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes msgDescricao {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+

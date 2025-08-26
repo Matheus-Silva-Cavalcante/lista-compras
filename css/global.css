@@ -4,6 +4,9 @@
 }
 
 :root{
+    font-size: 10px;
+    font-family: var(--font-family);
+
     --background-primary: #F4F5FB;
     --background-secondary: #FFFFFF;
 
@@ -27,9 +30,7 @@
 }
 
 html{
-    font-size: 10px;
-    font-family: var(--font-family);
-    height: 100%;
+    
 }
 
 body{
